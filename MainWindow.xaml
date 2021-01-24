@@ -34,7 +34,7 @@
 
             <Separator Height="66" Margin="0,0,0,-0.4" VerticalAlignment="Top" Width="4"/>
             <Label Name="lblColor" Content="Цвет:" Height="34" VerticalAlignment="Top" Margin="0,32,0,-0.4"/>
-            <ComboBox Name="comboColor" Height="20" Margin="0,40,0,0" 
+            <ComboBox Name="comboColor" Height="20" Margin="0,35,0,0" 
                       VerticalAlignment="Top" Width="120"
                       
                       Text="Цвет"
