@@ -56,7 +56,6 @@ namespace MyPainter
                     elps.Stroke = Brushes.Black;
                     break;
             }
-           
             elps.Margin = new Thickness(X - 2, Y - 2, 0, 0);
             elps.Tag = "MyEllipse";
             return elps;
@@ -104,8 +103,6 @@ namespace MyPainter
             {
                
                 Canvas1.Children.Clear();
-               
-                foreach (Line l in lns) Canvas1.Children.Add(l);
                 l2.Stroke = Brushes.Red;
                 l2.StrokeThickness = 3;
                 l2.X1 = pnt[pnt.Count - 1].X;
@@ -138,13 +135,14 @@ namespace MyPainter
             {
                 lns.Add(l);
             }
-            
+            Canvas1.Children.Clear();
+
+            foreach (Line l in lns) Canvas0.Children.Add(l);
             
         }
 
         private void Canvas1_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
-            //lblColor.Content = "Кукареку!";
             var Position = Mouse.GetPosition(Canvas1);
             Point npnt1 = new Point(Position.X, Position.Y);
             pnt.Add(npnt1);
