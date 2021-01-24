@@ -59,6 +59,7 @@
 
 
         </Menu>
+        <Canvas Name="Canvas0" Background="Transparent" HorizontalAlignment="Left" Height="424" Margin="-9,70,0,-422.8" VerticalAlignment="Top" Width="988"  Grid.ColumnSpan="2"  />
         <Canvas Name="Canvas1" Background="Transparent" HorizontalAlignment="Left" Height="424" Margin="-9,70,0,-422.8" VerticalAlignment="Top" Width="988" MouseLeftButtonDown="Canvas1_MouseLeftButtonDown" MouseMove="Canvas1_MouseMove" MouseLeftButtonUp="Canvas1_MouseLeftButtonUp" Grid.ColumnSpan="2" MouseRightButtonDown="Canvas1_MouseRightButtonDown" MouseRightButtonUp="Canvas1_MouseRightButtonUp"/>
 
     </Grid>

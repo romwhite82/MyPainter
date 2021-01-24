@@ -97,7 +97,7 @@ namespace MyPainter
             if (isPainting == true)
             {
                 var Position = Mouse.GetPosition(Canvas1);
-                Canvas1.Children.Add(myEllipse(Position.X, Position.Y));
+                Canvas0.Children.Add(myEllipse(Position.X, Position.Y));
             }
 
             if (e.RightButton == MouseButtonState.Pressed)
@@ -105,7 +105,7 @@ namespace MyPainter
                
                 Canvas1.Children.Clear();
                
-                foreach (UIElement elmt in myUi) Canvas1.Children.Add(elmt);
+                foreach (Line l in lns) Canvas1.Children.Add(l);
                 l2.Stroke = Brushes.Red;
                 l2.StrokeThickness = 3;
                 l2.X1 = pnt[pnt.Count - 1].X;
@@ -134,18 +134,11 @@ namespace MyPainter
             pnt.Clear();
             pnt.Add(npnt);
 
-            for (int i=0; i<Canvas1.Children.Count; i++)
+            foreach (Line l in Canvas1.Children)
             {
-                if (Canvas1.Children[i].GetType().ToString() == "System.Windows.Shapes.Line")
-                {
-                    myUi.Add(Canvas1.Children[i]);
-                }
-
-                else if (Canvas1.Children[i].GetType().ToString() == "System.Windows.Shapes.Ellipse")
-                {
-                    myUi.Add(Canvas1.Children[i]);
-                }
+                lns.Add(l);
             }
+            
             
         }
 
