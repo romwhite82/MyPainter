@@ -127,8 +127,6 @@ namespace MyPainter
             var Position = Mouse.GetPosition(Canvas1);
             Point npnt = new Point(Position.X, Position.Y);
             lns.Clear();
-            elps.Clear();
-            myUi.Clear();
             pnt.Clear();
             pnt.Add(npnt);
 
@@ -151,7 +149,7 @@ namespace MyPainter
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            foreach (UIElement myElements in Canvas1.Children)
+            foreach (UIElement myElements in Canvas0.Children)
             {
                 myUi.Add(myElements);
             }
