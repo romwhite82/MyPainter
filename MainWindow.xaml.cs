@@ -119,6 +119,7 @@ namespace MyPainter
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
             Canvas1.Children.Clear();
+            Canvas0.Children.Clear();
         }
 
         private void Canvas1_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
